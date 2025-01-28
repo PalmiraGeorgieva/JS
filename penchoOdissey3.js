@@ -5,29 +5,20 @@ function pen4osOdyssey(cipher) {
     const numbers = cipher.match(/\d/g) || [];
     const lowerCaseMatches = cipher.match(/[a-z]/g) || [];
     const upperCaseMatches = cipher.match(/[A-Z]/g) || [];
+    let sumNumb = 0;
+    let totalPowerCard = 0
 
-    const transformLowerLetters = lowerCaseMatches.map(char => char.toUpperCase());
-    const transformUpperLetters = upperCaseMatches.map(char => char.toLowerCase());
+    if(sumNumb += numbers && lowerCaseMatches === upperCaseMatches && upperCaseMatches === lowerCaseMatches){
 
-    const totalPowerCard = numbers.reduce((sum, num) => sum + Number(num), 0);
-   
+    }
+    totalPowerCard += numbers
 
-    let decryptedText = cipher.split("").map(char => {
-        if (/[a-z]/.test(char)) {
-            return transformLowerLetters.length > 0 ? transformLowerLetters.shift() : char;
-        } else if (/[A-Z]/.test(char)) {
-            return transformUpperLetters.length > 0 ? transformUpperLetters.shift() : char;
-        } else {
-            return char;
-        }
-    }).join("");
-
-    console.log(`${decryptedText}`);
+    console.log(`${cipher}`);
 
     if (totalPowerCard > 20) {
         console.log(`The map reveals the your next location! Total power: ${totalPowerCard}`);
     } else {  
-        console.log(`The map warns of danger! Total power: ${totalPowerCard}`);
+        console.log(`The map warns of danger! Total power: ${Math.floor(totalPowerCard)}`);
     }
   
 }
