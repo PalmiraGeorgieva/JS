@@ -5,15 +5,17 @@ function pen4osOdyssey(cipher) {
     const numbers = cipher.match(/\d/g) || [];
     const lowerCaseMatches = cipher.match(/[a-z]/g) || [];
     const upperCaseMatches = cipher.match(/[A-Z]/g) || [];
-    let sumNumb = 0;
+   
     let totalPowerCard = 0
-
-    if(sumNumb += numbers && lowerCaseMatches === upperCaseMatches && upperCaseMatches === lowerCaseMatches){
-
-    }
     totalPowerCard += numbers
+    let transformedCipher = cipher.split('')
+            .map(char => char === char.toUpperCase() 
+                  ? char.toLowerCase()
+                  : char.toUpperCase())
+            .join('');      
 
-    console.log(`${cipher}`);
+    console.log(transformedCipher);
+
 
     if (totalPowerCard > 20) {
         console.log(`The map reveals the your next location! Total power: ${totalPowerCard}`);
