@@ -5,7 +5,6 @@ function pen4osOdyssey(cipher) {
     const numbers = cipher.match(/\d/g) || [];
     const lowerCaseMatches = cipher.match(/[a-z]/g) || [];
     const upperCaseMatches = cipher.match(/[A-Z]/g) || [];
-   
     let totalPowerCard = 0
     totalPowerCard += numbers
     let transformedCipher = cipher.split('')
@@ -15,8 +14,6 @@ function pen4osOdyssey(cipher) {
             .join('');      
 
     console.log(transformedCipher);
-
-
     if (totalPowerCard > 20) {
         console.log(`The map reveals the your next location! Total power: ${totalPowerCard}`);
     } else {  
