@@ -1,14 +1,14 @@
 function info(speed) {
     if (speed <= 10) {
         console.log("slow");
-    } else if (speed > 10 && speed <= 50) {
+    } else if ( speed <= 50) {
         console.log("average");
-    } else if (speed > 50 && speed <= 150) {
+    } else if ( speed <= 150) {
         console.log("fast");
-    } else if (speed > 150 && speed <= 1000) {
+    } else if ( speed <= 1000) {
         console.log("ultra fast");
     } else {
         console.log("extremely fast")
     }
 }
-info(100000);
+info(11);

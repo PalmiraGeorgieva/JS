@@ -1,0 +1,3 @@
+function vacation(budget, season) {
+    
+}
