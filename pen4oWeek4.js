@@ -9,13 +9,9 @@ function pen4oWeek4(startNum, endNum) {
             reversedNum = reversedNum * 10 + lastDigit;
             luckyNum = Math.floor(luckyNum / 10);
         }
-
-    
         if(num % 2 == 0 && num % 3 === 0 && num === reversedNum) {
             console.log(num);
-            foundLuckyNum = true;
-            break;
-            
+            foundLuckyNum = true  
         } 
     }
     if (!foundLuckyNum) {
