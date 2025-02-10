@@ -11,23 +11,25 @@ function pen4oWeek5(targetVolume, input) {
     while (targetVolume !== totalQuantity) {
         let capacityCanne = Number(input[index]);
         index++;
-        totalQuantity += capacityCanne
-        
         if (capacityCanne < 0) {
             console.log(`Failure! The well has been sealed.`);
             break;
+        totalQuantity += capacityCanne
+        
+        
         }
 
         if (totalQuantity > targetVolume) {
             console.log(`Overflow! The well rejects your offering.`);
             break;
         } 
-    
-
-    }
-    if (targetVolume === totalQuantity) {
+        if (targetVolume === totalQuantity) {
         console.log(`Success! The well reveals its precious treasure!`);
         
     } 
+    
+
+    }
+    
 }
 pen4oWeek5(50, [30, 20])
