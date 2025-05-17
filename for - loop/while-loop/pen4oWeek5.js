@@ -15,6 +15,7 @@ function pen4oWeek5(targetVolume, input) {
             console.log(`Failure! The well has been sealed.`);
             break;
         }
+        totalQuantity += capacityCanne
 
         totalQuantity += capacityCanne
         
