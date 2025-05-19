@@ -1,0 +1,9 @@
+#my-todo-list {
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+  }
